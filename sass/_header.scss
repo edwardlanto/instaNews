@@ -1,0 +1,70 @@
+$tablet-width: 600px;
+    @mixin tablet{
+        @media (min-width: $tablet-width){
+            @content;
+        }       
+    }
+
+$desktop-width: 1000px;
+    @mixin desktop{
+        @media screen and(min-width: $desktop-width){
+            @content;
+        }
+    }
+
+
+.container{
+    display:flex;
+    justify-content:center;
+    @include tablet{
+    justify-content:flex-start;
+
+    }
+
+}
+
+// .sectionparent{
+//     display:flex;
+//     justify-content:center;
+//     flex-wrap:wrap;
+// }
+
+body {
+    background-color:black;
+}
+
+
+
+.nytimage{
+    width:200px;
+    margin-top:5rem;
+    align-self:center;
+    @include tablet{
+    width:30%;
+    }
+    @include desktop{
+    width:200px;
+    }
+}
+
+
+.sectiontext{
+    color:#ffffff;
+    font-size:16px;
+    margin-top:20px;
+    display:block;
+    position:relative;
+    padding-bottom:40px;
+    font-family:"oslight",sans-serif;
+
+}
+
+
+form.searchform input[type="button"]{
+    font-size:40rem;
+}
+
+
+// .searchsection{
+//     display:block;
+// }
