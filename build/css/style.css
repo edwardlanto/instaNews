@@ -78,40 +78,45 @@ table {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-direction: row;
-      flex-direction: row; }
+  width: 100%;
+  -ms-flex-direction: column;
+      flex-direction: column; }
   @media (min-width: 600px) {
     .container {
-      -ms-flex-pack: start;
-          justify-content: flex-start; } }
+      -ms-flex-direction: row;
+          flex-direction: row;
+      text-align: center; } }
 
 body {
   background-color: black; }
 
 .nytimage {
-  width: 200px;
-  margin-top: 5rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center; }
+  margin-top: 8rem; }
   @media (min-width: 600px) {
     .nytimage {
-      width: 30%; } }
-  @media screen and (min-width: 1000px) {
-    .nytimage {
-      width: 200px; } }
+      width: 25%;
+      margin-top: 13rem;
+      margin-right: 10px; } }
 
-.sectiontext {
+@media (min-width: 600px) {
+  .nav-wrapper {
+    padding-top: 200px;
+    margin-right: 200px; } }
+
+.nav-wrapper .sectiontext {
   color: #ffffff;
   font-size: 16px;
   margin-top: 20px;
-  display: block;
-  position: relative;
   padding-bottom: 40px;
+  text-align: center;
   font-family: "oslight",sans-serif; }
 
-button {
-  font-size: 1.1rem; }
+.nav-wrapper .select {
+  text-align: center; }
+
+.copyright {
+  text-align: center;
+  margin: 0 auto; }
 
 .copyright {
   color: #c2c2c2;

@@ -1,13 +1,22 @@
 .container{
     display:flex;
     justify-content:center;
-    flex-direction:row;
+    width:100%;
+    flex-direction:column;
     @include tablet{
+    flex-direction:row;
+    text-align:center;
+    @include desktop{
     justify-content:flex-start;
 
     }
+    
+    }
 
 }
+
+
+
 
 body {
     background-color:black;
@@ -16,35 +25,62 @@ body {
 
 
 .nytimage{
-    width:200px;
-    margin-top:5rem;
-    align-self:center;
+    margin-top:8rem;
     @include tablet{
-
+    width:25%;
+    margin-top:13rem;
+    margin-right:10px;
+  
     }
     @include desktop{
-    width:50px;
+    
     }
 }
+.nav-wrapper{
+    @include tablet{
+    padding-top:250px;
+    margin-right:200px;
+  
+    }
+    @include desktop{
 
+
+}
 
 .sectiontext{
     color:#ffffff;
     font-size:16px;
     margin-top:20px;
-    display:block;
-    position:relative;
     padding-bottom:40px;
+    text-align:center;
     font-family:"oslight",sans-serif;
+    @include tablet{
+    
 
+    }
+    @include desktop{
+
+    }
 }
 
-
-button{
+select{
+    text-align:center;
     font-size:1.1rem;
+    @include tablet{
+        
+    
+
+    }
+    @include desktop{
+
+    }
 }
 
 
-// .searchsection{
-//     display:block;
-// }
+.copyright{
+    text-align:center;
+    margin:0 auto;
+}
+
+  
+
