@@ -77,19 +77,13 @@ table {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row; }
   @media (min-width: 600px) {
     .container {
       -ms-flex-pack: start;
           justify-content: flex-start; } }
-
-.sectionparent {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
 
 body {
   background-color: black; }
@@ -102,7 +96,7 @@ body {
       align-self: center; }
   @media (min-width: 600px) {
     .nytimage {
-      width: 200px; } }
+      width: 30%; } }
   @media screen and (min-width: 1000px) {
     .nytimage {
       width: 200px; } }
@@ -116,8 +110,8 @@ body {
   padding-bottom: 40px;
   font-family: "oslight",sans-serif; }
 
-form.searchform input[type="button"] {
-  font-size: 40rem; }
+button {
+  font-size: 1.1rem; }
 
 .copyright {
   color: #c2c2c2;
