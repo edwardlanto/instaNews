@@ -4,7 +4,6 @@
     flex-direction:column;
     @include tablet{
     flex-direction:row;
-    text-align:center;
     @include desktop{
     justify-content:flex-start;
     }
@@ -16,7 +15,8 @@ body {
     background-color:black;
         }
   
-.nytimage{
+#nytimage{
+    height: 180px;
     margin-top:8rem;
     text-align:center;
     animation-name:nytanimation;
@@ -27,13 +27,10 @@ body {
     animation-fill-mode: forwards;
 @include tablet{
     animation-name:nytanimatetablet;
-    width:30%;
     margin-top:13rem;
     margin-right:10px;
-    height:auto;
 @include desktop{
     align-self:flex-start;
-    width:200px;
     }   
     }   
             }

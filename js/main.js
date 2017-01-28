@@ -14,6 +14,7 @@ $(document).ready(function(){
   
 
   .done(function(data) {
+    console.log(data)
    var $data = data.results.filter(function(item){
      return item.multimedia.length;
    }).splice(0, 12);
@@ -22,7 +23,7 @@ $(document).ready(function(){
        var articlePictures = ''
        articlePictures =  '<img src="' + value.multimedia[4].url +'" />'
        var articleName = value.abstract;
-      var fullArticle = '<a href =' + articleUrl + '>' + '<div>' + '<li>' +  articlePictures + '<h1>' + articleName + '</h2>' + '</li>' + '</div>' + '</a>'
+      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'  +  articlePictures + '<h2>' + articleName + '</h2>'  +  '</a>' + '</li>'
       console.log(data)
       
      

@@ -84,19 +84,42 @@ a {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
 
-.imgcontainer {
-  height: 420px;
-  width: 100vh;
-  z-index: -1px; }
+ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   @media (min-width: 600px) {
-    .imgcontainer {
-      width: 50vh; } }
+    ul {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
+
+li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; }
+  @media (min-width: 600px) {
+    li {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; } }
+
+img {
+  height: 420px;
+  width: 100vw; }
+
+.flexcontainer {
+  display: -ms-flexbox;
+  display: flex; }
 
 h2 {
   display: block;
   position: absolute;
   z-index: 1px;
-  margin-bottom: 100px; }
+  margin-top: 400px;
+  line-height: 2rem; }
 
 .container {
   display: -ms-flexbox;
@@ -108,8 +131,7 @@ h2 {
   @media (min-width: 600px) {
     .container {
       -ms-flex-direction: row;
-          flex-direction: row;
-      text-align: center; } }
+          flex-direction: row; } }
   @media (min-width: 600px) and (min-width: 1000px) {
     .container {
       -ms-flex-pack: start;
@@ -118,7 +140,8 @@ h2 {
 body {
   background-color: black; }
 
-.nytimage {
+#nytimage {
+  height: 180px;
   margin-top: 8rem;
   text-align: center;
   animation-name: nytanimation;
@@ -128,17 +151,14 @@ body {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards; }
   @media (min-width: 600px) {
-    .nytimage {
+    #nytimage {
       animation-name: nytanimatetablet;
-      width: 30%;
       margin-top: 13rem;
-      margin-right: 10px;
-      height: auto; } }
+      margin-right: 10px; } }
   @media (min-width: 600px) and (min-width: 1000px) {
-    .nytimage {
+    #nytimage {
       -ms-flex-item-align: start;
-          align-self: flex-start;
-      width: 200px; } }
+          align-self: flex-start; } }
 
 @keyframes nytanimation {
   0% {

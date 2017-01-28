@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel ="stylesheet" href ="build/css/style.min.css">
+    <link rel="stylesheet" href="build/css/style.min.css">
     <meta charset="UTF-8">
     <title>Instanews</title>
 </head>
+
 <body>
     <header class="container">
-           <img src="./images/nyt-logo.svg" class="nytimage" alt="NYT logo">
-           <div class="nav-wrapper">
-              <p class="sectiontext">Choose a section:</p>
-              <select class ="selector">
+        <img src="./images/nyt-logo.svg" id="nytimage" alt="NYT logo">
+        <div class="nav-wrapper">
+            <p class="sectiontext">Choose a section:</p>
+            <select class="selector">
                         <option value="sections">Sections...</option>
                         <option value="science">Science</option>
                         <option value="home">Home</option>
@@ -19,14 +21,15 @@
                         <option value="technology">Technology</option>
                         <option value="fashion">Fashion</option>
             </select>
-            </header>
-            <div class ="itemscontainer">
-            <ul class="articlelist"></ul>
-            </div>
+    </header>
+
+    <ul class="articlelist"></ul>
+
     <footer class="container">
         <h1 class="copyright">Copyright 2016 <span class="instacaps">instanews</span></h1>
     </footer>
-    <script src= "lib/jquery-3.1.1.min.js"></script>
-    <script src= "js/main.js"></script>
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

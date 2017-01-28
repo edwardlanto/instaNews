@@ -10,22 +10,51 @@ a {
     @include desktop{
 }
 }
-.imgcontainer{
-    height:420px;
-    width:100vh;
-    z-index:-1px;
-     @include tablet{
-    width:50vh;
-    
-    }
-    @include desktop{
 
+
+ul{
+    display:flex;
+    flex-wrap:wrap;
+    @include tablet{
+    flex-direction:row;
+   
+    @include desktop{
+    }
     }
 }
+li{
+    display:flex;
+    flex-direction:column;
+   flex-basis:100%;
 
+    @include tablet{
+    flex-basis:50%;
+   
+    @include desktop{
+    
+    }
+
+}
+}
+
+img{
+    height:420px;
+    width:100vw;
+        @include tablet{
+    width:50vw;
+   
+    @include desktop{
+    
+}
+
+
+.flexcontainer{
+    display:flex;
+}
 h2{
     display:block;
     position:absolute;
     z-index:1px;
-    margin-bottom:100px;
+    margin-top:400px;
+    line-height:2rem;
 }
