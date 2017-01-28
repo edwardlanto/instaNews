@@ -1,28 +1,39 @@
 $(document).ready(function(){
-    $('.select').on('change', function(){
-        var userInput = $('.select').val();
-        var $articleList = $('.articleList')
-var url = 'https://api.nytimes.com/svc/topstories/v2/' + userInput + '.json';
-url += '?' + $.param({
-  'api-key': 'c70afdcb975e42eea907298ce2cd5830'
-});
-$.ajax({
-  urlkey: url,
-  method: 'GET',
-}).done(function(data) {
-  $.each(data.results, function(key, value){
-    var articleName = value.abstract
-    var articlePicture = value.multimedia[4].url
-    var fullArticle = '<li>' + articlePicture + articleName + '</li>'
-    console.log(data)
-    $articleList.append(articlePicture)
+  $('.selector').on('change', function(){
+      var userInput = $('.selector').val();
+
+      var url = 'https://api.nytimes.com/svc/topstories/v2/' + userInput + '.json';
+      url += '?' + $.param({
+      'api-key': 'c70afdcb975e42eea907298ce2cd5830'
+      });
+  $.ajax({
+    url: url,
+    method: 'GET',
+    // dataType:'json'
   })
+  
 
-   });
-
-  // .fail(function(err) {ç
-  // throw err;
-});
-
+  .done(function(data) {
+   var $data = data.results.filter(function(item){
+     return item.multimedia.length;
+   }).splice(0, 12);
+    $.each($data , function(item, value){
+       var articleUrl = value.url
+       var articlePictures = ''
+       articlePictures =  '<img src="' + value.multimedia[4].url +'" />'
+       var articleName = value.abstract;
+      var fullArticle = '<a href =' + articleUrl + '>' + '<div>' + '<li>' +  articlePictures + '<h1>' + articleName + '</h2>' + '</li>' + '</div>' + '</a>'
+      console.log(data)
+      
+     
+      $('.articlelist').append(fullArticle);
     });
-// });
+      
+
+    })
+.fail(function(err) {
+      throw err;
+
+    }); 
+  });//onclick close
+});//document dot rdy

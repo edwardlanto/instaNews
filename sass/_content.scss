@@ -1,0 +1,31 @@
+a {
+    color: white;
+    text-decoration:none;
+      @include tablet{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    
+    }
+    @include desktop{
+}
+}
+.imgcontainer{
+    height:420px;
+    width:100vh;
+    z-index:-1px;
+     @include tablet{
+    width:50vh;
+    
+    }
+    @include desktop{
+
+    }
+}
+
+h2{
+    display:block;
+    position:absolute;
+    z-index:1px;
+    margin-bottom:100px;
+}

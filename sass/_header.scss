@@ -1,7 +1,6 @@
 .container{
     display:flex;
     justify-content:center;
-    width:100%;
     flex-direction:column;
     @include tablet{
     flex-direction:row;
@@ -114,6 +113,7 @@ body {
     padding:0;
     width:100;
     font-family:'osbold';
+    transition: all ease 0.2s;
     @include tablet{
     
     }
@@ -121,6 +121,8 @@ body {
 
     }
     }
+
+    
 
 .copyright{
     text-align:center;
