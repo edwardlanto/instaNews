@@ -1,11 +1,15 @@
 $(document).ready(function(){
   $('.selector').on('change', function(){
       var userInput = $('.selector').val();
+      
 
       var url = 'https://api.nytimes.com/svc/topstories/v2/' + userInput + '.json';
       url += '?' + $.param({
       'api-key': 'c70afdcb975e42eea907298ce2cd5830'
       });
+      
+      
+  $('.articlelist').empty();
   $.ajax({
     url: url,
     method: 'GET',
@@ -23,7 +27,7 @@ $(document).ready(function(){
        var articlePictures = ''
        articlePictures =  '<img src="' + value.multimedia[4].url +'" />'
        var articleName = value.abstract;
-      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'  +  articlePictures + '<h2>' + articleName + '</h2>'  +  '</a>' + '</li>'
+      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<h2>' + articleName + '</h2>' + articlePictures  +  '</a>' + '</li>'
       console.log(data)
       
      
