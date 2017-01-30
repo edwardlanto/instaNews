@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  $('.selector').on('change', function(){
+  
+ $('.selector').on('change', function(){
       var userInput = $('.selector').val();
       
 
@@ -27,7 +28,7 @@ $(document).ready(function(){
        var articlePictures = ''
        articlePictures =  '<img src="' + value.multimedia[4].url +'" />'
        var articleName = value.abstract;
-      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<div id = "backgroundpic">' + '<h2>' + articleName + '</h2>' + '</div>' + articlePictures  +  '</a>' + '</li>'
+      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<p class = "contenttext">' + articleName + '</p>' + articlePictures  +  '</a>' + '</li>'
       console.log(data)
       
      

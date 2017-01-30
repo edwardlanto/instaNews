@@ -47,28 +47,28 @@ table {
 
 @font-face {
   font-family: 'osbold';
-  src: url("./fonts/opensans-bold-webfont.eot");
-  src: url("./fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/opensans-bold-webfont.woff2") format("woff2"), url("./fonts/opensans-bold-webfont.woff") format("woff"), url("./fonts/openfonts/sans-bold-webfont.ttf") format("truetype"), url("./fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  src: url("/fonts/opensans-bold-webfont.eot");
+  src: url("/fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-bold-webfont.woff2") format("woff2"), url("/fonts/opensans-bold-webfont.woff") format("woff"), url("/fonts/openfonts/sans-bold-webfont.ttf") format("truetype"), url("/fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'osbolditalic';
-  src: url("opensans-bolditalic-webfont.eot");
-  src: url("opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-bolditalic-webfont.woff2") format("woff2"), url("opensans-bolditalic-webfont.woff") format("woff"), url("opensans-bolditalic-webfont.ttf") format("truetype"), url("opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
+  src: url("/fonts/opensans-bolditalic-webfont.eot");
+  src: url("/fonts/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-bolditalic-webfont.woff2") format("woff2"), url("/fonts/opensans-bolditalic-webfont.woff") format("woff"), url("/fonts/opensans-bolditalic-webfont.ttf") format("truetype"), url("/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'oslight';
-  src: url("../opensans-light-webfont.eot");
-  src: url("../opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../opensans-light-webfont.woff2") format("woff2"), url("../opensans-light-webfont.woff") format("woff"), url("../opensans-light-webfont.ttf") format("truetype"), url("../opensans-light-webfont.svg#open_sanslight") format("svg");
+  src: url("/fonts/opensans-light-webfont.eot");
+  src: url("/fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-light-webfont.woff2") format("woff2"), url("/fonts/opensans-light-webfont.woff") format("woff"), url("/fonts/opensans-light-webfont.ttf") format("truetype"), url("/fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
   font-style: normal; }
 
 @font-face {
   font-family: 'oslightitalic';
-  src: url("opensans-lightitalic-webfont.eot");
-  src: url("opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("opensans-lightitalic-webfont.woff2") format("woff2"), url("opensans-lightitalic-webfont.woff") format("woff"), url("opensans-lightitalic-webfont.ttf") format("truetype"), url("opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
+  src: url("/fonts/opensans-lightitalic-webfont.eot");
+  src: url("/fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-lightitalic-webfont.woff2") format("woff2"), url("/fonts/opensans-lightitalic-webfont.woff") format("woff"), url("/fonts/opensans-lightitalic-webfont.ttf") format("truetype"), url("/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -100,11 +100,14 @@ li {
       flex-direction: column;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: 420px;
   overflow-x: hidden;
   overflow-y: hidden;
   box-sizing: border-box;
-  z-index: -1px; }
+  z-index: -1px;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
   @media (min-width: 600px) {
     li {
       -ms-flex-preferred-size: 50%;
@@ -115,33 +118,35 @@ li {
           flex-basis: 25%; } }
 
 img {
-  width: 100vh; }
+  height: 420px;
+  width: 100%; }
   @media (min-width: 600px) {
-    img {
-      width: 100vh;
-      height: 420px; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
     img {
       width: 100%; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    img {
+      height: 390px;
+      width: 100%; } }
 
-h2 {
-  position: absolute;
+.contenttext {
   z-index: 3px;
   line-height: 2rem;
-  max-width: 100%;
+  min-width: 100%;
   box-sizing: border-box;
-  margin-top: 280px;
-  display: block; }
-  @media (min-width: 600px) {
-    h2 {
-      width: 50%; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
-    h2 {
-      width: 25%; } }
+  font-family: 'oslight',sans-serif;
+  font-size: 16px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-size: 100%, 100%;
+  position: absolute;
+  bottom: 0;
+  padding-left: 1rem; }
 
 .container {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-direction: column;
@@ -159,9 +164,11 @@ body {
   background-color: black; }
 
 #nytimage {
+  margin-top: 10rem;
+  height: auto;
+  vertical-align: middle;
   width: auto;
   height: 180px;
-  margin-top: 8rem;
   text-align: center;
   animation-name: nytanimation;
   animation-duration: 1s;
@@ -219,6 +226,7 @@ body {
 .sectiontext {
   color: #ffffff;
   font-size: 16px;
+  font-family: 'oslight',sans-serif;
   margin-top: 20px;
   padding-bottom: 40px;
   text-align: center; }
@@ -229,18 +237,24 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100;
-  font-family: 'osbold';
+  font-family: 'oslight',sans-serif;
   transition: all ease 0.2s; }
 
 .copyright {
-  text-align: center; }
+  text-align: center;
+  font-family: 'oslight',sans-serif; }
   @media (min-width: 1000px) {
     .copyright {
       margin-left: 30px; } }
 
+footer {
+  position: relative;
+  height: 130px; }
+
 .copyright {
   color: #c2c2c2;
-  margin-top: 150px; }
+  position: absolute;
+  bottom: 0; }
 
 .instacaps {
   text-transform: uppercase; }
