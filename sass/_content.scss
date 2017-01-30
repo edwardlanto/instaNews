@@ -1,5 +1,10 @@
 
-
+.preloader img{
+    height:50px;
+    width:50px;
+    margin-top:20px;
+    margin-left:40px;
+}
 a {
     color: white;
     text-decoration:none;
@@ -25,15 +30,13 @@ ul{
     }
 }
 li{
-    flex-direction:column;
+    flex-direction:row;
     flex-basis:100%;
-    // height:420px;
     overflow-x:hidden;
     overflow-y:hidden;
     box-sizing:border-box;
-    z-index:-1px;
     position:relative;
-    align-self:center;
+    height:420px;
     @include tablet{
     flex-basis:50%;
    
@@ -45,18 +48,16 @@ li{
 }
 }
 
+
+
     img{
         height:420px;
         width:100%;
         @include tablet{
         
-        width:100%;
-        
-    
         @include desktop{
-        height:390px;
-        width:100%;
-        // width:390px;
+        height:400px;
+        width:auto;
         
     }
     }
@@ -76,16 +77,9 @@ li{
     position:absolute;
     bottom:0;
     padding-left:1rem;
-    
-        
- 
-
     @include tablet{
-    // width:50%;
-
-
+    
     @include desktop{
-    // width:25%;
         
     }
 }

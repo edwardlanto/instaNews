@@ -3,9 +3,13 @@
     align-items:center;
     justify-content:center;
     flex-direction:column;
+    height: 40rem;
+    overflow:hidden;
     @include tablet{
+    height: 40rem;
     flex-direction:row;
     @include desktop{
+    height: 40rem;
     justify-content:flex-start;
     }
     
@@ -16,13 +20,12 @@ body {
     background-color:black;
         }
   
-#nytimage{
-    margin-top:10rem;
-    height:auto;
+.nytimage{
     vertical-align:middle;
     width:auto;
-    height: 180px;
+    height: 220px;
     text-align:center;
+    padding-bottom:1rem;
     animation-name:nytanimation;
     animation-duration:1s;
     animation-iteration-count:1;
@@ -30,11 +33,12 @@ body {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 @include tablet{
+    width:25%;
+    height:auto;
     animation-name:nytanimatetablet;
-    margin-top:13rem;
     margin-right:10px;
 @include desktop{
-    align-self:flex-start;
+    height:180px;
     }   
     }   
             }
@@ -67,7 +71,6 @@ body {
     animation-fill-mode: forwards;;
     @include tablet{
     animation-name:navanimatetablet;
-    padding-top:250px;
     margin-right:200px;
         }
     @include desktop{
@@ -97,8 +100,7 @@ body {
     color:#ffffff;
     font-size:16px;
     font-family:'oslight',sans-serif;
-    margin-top:20px;
-    padding-bottom:40px;
+    margin-bottom:20px;
     text-align:center;
     @include tablet{
     
@@ -111,8 +113,6 @@ body {
 .selector{
     font-size:1.1rem;
     display:block; 
-    margin:0 auto;
-    padding:0;
     width:100;
     font-family:'oslight',sans-serif;
     transition: all ease 0.2s;
@@ -135,4 +135,27 @@ body {
     @include desktop{
     margin-left:30px;
     }
+}
+
+.headershiftwitharticles{
+    height:auto;
+    padding-top:30px;
+    padding-bottom:20px;
+    
+}
+
+
+.shrinkimage{
+    width:150px;
+    height:150px;
+
+  @include tablet{
+    width:67px;
+    height:67px;
+    
+    @include desktop{
+    margin-left:30px;
+    }
+}
+
 }

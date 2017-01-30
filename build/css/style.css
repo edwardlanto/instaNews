@@ -57,7 +57,7 @@ table {
   src: url("/fonts/opensans-bolditalic-webfont.eot");
   src: url("/fonts/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-bolditalic-webfont.woff2") format("woff2"), url("/fonts/opensans-bolditalic-webfont.woff") format("woff"), url("/fonts/opensans-bolditalic-webfont.ttf") format("truetype"), url("/fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg");
   font-weight: bold;
-  font-style: normal; }
+  font-style: italic; }
 
 @font-face {
   font-family: 'oslight';
@@ -70,7 +70,13 @@ table {
   src: url("/fonts/opensans-lightitalic-webfont.eot");
   src: url("/fonts/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/opensans-lightitalic-webfont.woff2") format("woff2"), url("/fonts/opensans-lightitalic-webfont.woff") format("woff"), url("/fonts/opensans-lightitalic-webfont.ttf") format("truetype"), url("/fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: italic; }
+
+.preloader img {
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+  margin-left: 40px; }
 
 a {
   color: white;
@@ -96,18 +102,15 @@ ul {
           flex-direction: row; } }
 
 li {
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
   box-sizing: border-box;
-  z-index: -1px;
   position: relative;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center; }
+  height: 420px; }
   @media (min-width: 600px) {
     li {
       -ms-flex-preferred-size: 50%;
@@ -120,13 +123,11 @@ li {
 img {
   height: 420px;
   width: 100%; }
-  @media (min-width: 600px) {
-    img {
-      width: 100%; } }
-  @media (min-width: 600px) and (min-width: 1000px) {
-    img {
-      height: 390px;
-      width: 100%; } }
+
+@media (min-width: 600px) and (min-width: 1000px) {
+  img {
+    height: 400px;
+    width: auto; } }
 
 .contenttext {
   z-index: 3px;
@@ -150,26 +151,29 @@ img {
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  height: 40rem;
+  overflow: hidden; }
   @media (min-width: 600px) {
     .container {
+      height: 40rem;
       -ms-flex-direction: row;
           flex-direction: row; } }
   @media (min-width: 600px) and (min-width: 1000px) {
     .container {
+      height: 40rem;
       -ms-flex-pack: start;
           justify-content: flex-start; } }
 
 body {
   background-color: black; }
 
-#nytimage {
-  margin-top: 10rem;
-  height: auto;
+.nytimage {
   vertical-align: middle;
   width: auto;
-  height: 180px;
+  height: 220px;
   text-align: center;
+  padding-bottom: 1rem;
   animation-name: nytanimation;
   animation-duration: 1s;
   animation-iteration-count: 1;
@@ -177,14 +181,14 @@ body {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards; }
   @media (min-width: 600px) {
-    #nytimage {
+    .nytimage {
+      width: 25%;
+      height: auto;
       animation-name: nytanimatetablet;
-      margin-top: 13rem;
       margin-right: 10px; } }
   @media (min-width: 600px) and (min-width: 1000px) {
-    #nytimage {
-      -ms-flex-item-align: start;
-          align-self: flex-start; } }
+    .nytimage {
+      height: 180px; } }
 
 @keyframes nytanimation {
   0% {
@@ -208,7 +212,6 @@ body {
   @media (min-width: 600px) {
     .nav-wrapper {
       animation-name: navanimatetablet;
-      padding-top: 250px;
       margin-right: 200px; } }
 
 @keyframes navanimation {
@@ -227,15 +230,12 @@ body {
   color: #ffffff;
   font-size: 16px;
   font-family: 'oslight',sans-serif;
-  margin-top: 20px;
-  padding-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center; }
 
 .selector {
   font-size: 1.1rem;
   display: block;
-  margin: 0 auto;
-  padding: 0;
   width: 100;
   font-family: 'oslight',sans-serif;
   transition: all ease 0.2s; }
@@ -247,14 +247,30 @@ body {
     .copyright {
       margin-left: 30px; } }
 
+.headershiftwitharticles {
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+
+.shrinkimage {
+  width: 150px;
+  height: 150px; }
+  @media (min-width: 600px) {
+    .shrinkimage {
+      width: 67px;
+      height: 67px; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    .shrinkimage {
+      margin-left: 30px; } }
+
 footer {
   position: relative;
-  height: 130px; }
+  overflow: hidden; }
 
 .copyright {
   color: #c2c2c2;
-  position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  text-align: center; }
 
 .instacaps {
   text-transform: uppercase; }

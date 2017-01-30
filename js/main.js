@@ -1,27 +1,26 @@
 $(document).ready(function(){
-  
- $('.selector').on('change', function(){
+  $('.preloader').hide();
+
+$('.selector').on('change', function(){
       var userInput = $('.selector').val();
-      
+      $('.container').addClass('headershiftwitharticles')
+      $('.nytimage').addClass('shrinkimage')
+      $(".preloader").show();
 
       var url = 'https://api.nytimes.com/svc/topstories/v2/' + userInput + '.json';
       url += '?' + $.param({
       'api-key': 'c70afdcb975e42eea907298ce2cd5830'
       });
-      
-      
-  $('.articlelist').empty();
-  $.ajax({
+$('.articlelist').empty();
+$.ajax({
     url: url,
     method: 'GET',
-    // dataType:'json'
-  })
+})
   
-
-  .done(function(data) {
-    console.log(data)
+.done(function(data) {
+    $('.preloader').hide();
    var $data = data.results.filter(function(item){
-     return item.multimedia.length;
+  return item.multimedia.length;  
    }).splice(0, 12);
     $.each($data , function(item, value){
        var articleUrl = value.url
@@ -30,6 +29,7 @@ $(document).ready(function(){
        var articleName = value.abstract;
       var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<p class = "contenttext">' + articleName + '</p>' + articlePictures  +  '</a>' + '</li>'
       console.log(data)
+      
       
      
       $('.articlelist').append(fullArticle);
