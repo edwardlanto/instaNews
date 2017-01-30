@@ -128,16 +128,16 @@ h2 {
   position: absolute;
   z-index: 3px;
   line-height: 2rem;
-  max-width: 600px;
+  max-width: 100%;
   box-sizing: border-box;
-  text-align: center;
-  margin-top: 280px; }
+  margin-top: 280px;
+  display: block; }
   @media (min-width: 600px) {
     h2 {
-      max-width: 400px; } }
+      width: 50%; } }
   @media (min-width: 600px) and (min-width: 1000px) {
     h2 {
-      max-width: 300px; } }
+      width: 25%; } }
 
 .container {
   display: -ms-flexbox;

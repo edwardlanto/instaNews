@@ -27,7 +27,7 @@ $(document).ready(function(){
        var articlePictures = ''
        articlePictures =  '<img src="' + value.multimedia[4].url +'" />'
        var articleName = value.abstract;
-      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<h2>' + articleName + '</h2>' + articlePictures  +  '</a>' + '</li>'
+      var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<div id = "backgroundpic">' + '<h2>' + articleName + '</h2>' + '</div>' + articlePictures  +  '</a>' + '</li>'
       console.log(data)
       
      

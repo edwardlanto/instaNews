@@ -32,6 +32,7 @@ li{
     overflow-y:hidden;
     box-sizing:border-box;
     z-index:-1px;
+    
     // width:100%;
 
     @include tablet{
@@ -46,10 +47,10 @@ li{
 }
 
     img{
-        // box-sizing:border-box;
+        
         width:100vh;
-            @include tablet{
-        // box-sizing:border-box;
+        @include tablet{
+        
         width:100vh;
         height:420px;
     
@@ -65,19 +66,34 @@ h2{
     position:absolute;
     z-index:3px;
     line-height:2rem;
-    max-width:600px;
+    max-width:100%;
     box-sizing:border-box;
-    text-align:center;
     margin-top:280px;
-
+    display:block;
+    
+        
+ 
 
     @include tablet{
-    max-width:400px;
+    width:50%;
 
 
     @include desktop{
-    max-width:300px;
+    width:25%;
         
     }
 }
 }
+
+// .backgroundpic{
+//     background-color:rgba(0,0,0,.6);
+//     max-width:600px;
+//     @include tablet{
+//     width:30%;
+
+
+//     @include desktop{
+//     width:50%;
+// }
+//     }
+// }
