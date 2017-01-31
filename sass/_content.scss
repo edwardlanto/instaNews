@@ -1,3 +1,6 @@
+.errortext {
+    color:white;
+}
 
 .preloader img{
     height:50px;
@@ -8,27 +11,25 @@
 a {
     color: white;
     text-decoration:none;
-      @include tablet{
+    @include tablet{
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    
     }
-    @include desktop{
 }
-}
-
 ul{
     position:relative;
     display:flex;
     flex-wrap:wrap;
+    color:white;
+    justify-content:center;
+    font-size:50px;
+    font-family:'oslight',sans-serif;
     @include tablet{
     flex-direction:row;
-   
-    @include desktop{
-    }
     }
 }
+
 li{
     flex-direction:row;
     flex-basis:100%;
@@ -42,26 +43,21 @@ li{
    
     @include desktop{
     flex-basis:25%;
+    height:360px;
     
+        }
     }
-
 }
-}
-
-
-
-    img{
-        height:420px;
-        width:100%;
-        @include tablet{
-        
-        @include desktop{
-        height:400px;
-        width:auto;
+img{
+    height:420px;
+    width:100%;
+@include desktop{
+    height:360px;
+    width:100%;
         
     }
-    }
-    }
+}
+    
 
 
 .contenttext{
@@ -77,12 +73,6 @@ li{
     position:absolute;
     bottom:0;
     padding-left:1rem;
-    @include tablet{
-    
-    @include desktop{
-        
-    }
-}
 }
 
 

@@ -3,7 +3,8 @@ $(document).ready(function(){
  var $container = $('.container')
  var $nytimage = $('.nytimage')
  var $preloader = $('.preloader')
- var errormessage = ('sorry there was an erro')
+ var errortext = 'Sorry, there was an error, please try again'
+ 
   $('.preloader').hide();
 
 $('.selector').on('change', function(){
@@ -33,8 +34,6 @@ $.ajax({
        articlePictures =  '<img src="' + value.multimedia[4].url +'" />'
        var articleName = value.abstract;
       var fullArticle = '<li>' + '<a href =' + articleUrl + '>'   + '<p class = "contenttext">' + articleName + '</p>' + articlePictures  +  '</a>' + '</li>'
-      
-      
      
       $articlelist.append(fullArticle);
     });
@@ -43,7 +42,7 @@ $.ajax({
     })
 .fail(function() {
   $('.preloader').hide();
-  $articlelist.append('sorry there was an error');
+  $articlelist.append(errortext);
 
     }); 
   });//onclick close
