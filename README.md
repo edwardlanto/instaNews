@@ -1,4 +1,4 @@
-<!---------READ.ME---------->
+-------READ.ME--------
 This project is a responsive webpage that  fetches current news article
 (abstracts), URL's and related images from the New York Times API and appends 
 it on the webpage. It's fully compatible for mobile, tablet and desktop
@@ -29,15 +29,17 @@ from my last project I should have implemented it, instead
 of trying to use percentages to fit the screen. I used to put
 display:flex on alot of unneccessary elements because my code
 was hard to read and I didnt understand display:flex as much and
-it would disorient my positions and that led me to give up.
-I understand now its only used on the parent and I need to declare
-the width of flex-basis and I would use flex-wrap to wrap along
-the the page. With flexbox I used a method I never used before,
-overflow. I had the problem where my images were going off the page
+it would disorient my heights/widths and that led me to give up.
+I understand now its only used on the parent that needs display:flex
+.I also used an overflow propery and it's really helpful for keeping things 
+on the screen. I had the problem where my images were going off the page
 or users would need to side scroll to see it, but with overflow
 it kept it hidden and removed the side scroll all together.I also learned
 about using flex-direction to move my logo and select box to 
-where I would want it. 
+where I would want it.
+
+Having ESlint and giving it rules it really hand and keep your code under
+a chartered set of rules to keep code structured.
 
     Using the AJAX method 'GET' I was able to get all the 
     information I needed. Now I understand API's and how they work and
@@ -45,7 +47,10 @@ to match them with my selector adding UserInput to the URL and
 making a variable from it. 'console.log' became very helpful
 to make sure I'm logging certain data at every point for specific
 kinds of data while I was navigating or 'traversing' through
-the DOM tree. 
+the DOM tree. ES
+
+I started to use comments on my main.js to keep organized and not have to keep wondering
+which closing bracket matches with each method/function. Node mo
 
     Learning to concatenate strings was very understable once I realized to just break it down and
 connect it with '+' signs. I took full advantage of addClass
@@ -56,5 +61,7 @@ API's with certain sections and gave me insight on
 how to give users options to choose from. Finally, one of the
 most important things I learned was to clean up my code
 and make it obvious to differ children and parents and 
-take out useless comments.
+take out commented code that I didn't need.
+
+Overall this project was really good, and I learned alot !
 
