@@ -9,7 +9,7 @@
     height: 40rem;
     flex-direction:row;
     @include desktop{
-    height: 40rem;
+    height: 27rem;
     justify-content:flex-start;
         }
     }
@@ -24,7 +24,6 @@ body {
     width:auto;
     height: 220px;
     text-align:center;
-    // padding-bottom:1rem;
     animation-name:nytanimation;
     animation-duration:1s;
     animation-iteration-count:1;
@@ -71,9 +70,7 @@ body {
     animation-name:navanimatetablet;
     margin-right:200px;
         }
-    @include desktop{
-     }
-        }
+    }
     
     @keyframes navanimation{
     0%{
@@ -97,15 +94,10 @@ body {
 .sectiontext{
     color:#ffffff;
     font-size:16px;
-    font-family:'oslight',sans-serif;
+    font-family:'opensans',sans-serif;
+    font-weight:lighter;
     margin-bottom:20px;
     text-align:center;
-    @include tablet{
-    
-    }
-    @include desktop{
-
-    }
         }
 
 .selector{
@@ -114,12 +106,6 @@ body {
     width:100;
     font-family:'oslight',sans-serif;
     transition: all ease 0.2s;
-    @include tablet{
-    
-    }
-    @include desktop{
-
-    }
     }
 
 .headershiftwitharticles{
