@@ -6,7 +6,6 @@ $(document).ready(function () {
   var errortext = 'Sorry, there was an error, please try again'
   var $navwrapper = $('.navwrapper')
 
-
   $preloader.hide();
 
   $('.selector').on('change', function () {
@@ -40,7 +39,7 @@ $(document).ready(function () {
           var fullArticle = ''
           fullArticle += '<li>' + '<a href='
           fullArticle += value.url + '>'
-          fullArticle += '<p class = "contenttext">'
+          fullArticle += '<div class ="text-container">' + '<p class = "contenttext">'
           fullArticle += value.abstract
           fullArticle += '</p>'
           fullArticle += '<img class = "contentcontainer"'
