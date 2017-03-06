@@ -26,20 +26,26 @@ $(document).ready(function () {
       method: 'GET',
     })//end of ajax method
 
-      .done(function (data) {
+      .always(function () {
         $preloader.hide();
+      })
+
+      .done(function (data) {
         var $data = data.results.filter(function (item) {
           return item.multimedia.length;
-        })// end of function call back function
+        }).splice(0, 12);// end of function call back function
 
-          .splice(0, 12);
+
         $.each($data, function (item, value) {
-          var articleUrl = value.url
-          var articlePictures = ''
-          articlePictures = '<img class ="contentcontainer"' + 'src="' + value.multimedia[4].url + '"  />'
-          var articleName = value.abstract;
-          var fullArticle = '<li>' + '<a href =' + articleUrl + '>' + '<p class = "contenttext">' + articleName + '</p>' + articlePictures + '</a>' + '</li>'
-
+          var fullArticle = ''
+          fullArticle += '<li>' + '<a href='
+          fullArticle += value.url + '>'
+          fullArticle += '<p class = "contenttext">'
+          fullArticle += value.abstract
+          fullArticle += '</p>'
+          fullArticle += '<img class = "contentcontainer"'
+          fullArticle += 'src="' + value.multimedia[4].url + '" />'
+          fullArticle += '</a>' + '</li>'
 
 
           $articlelist.append(fullArticle);
@@ -48,7 +54,6 @@ $(document).ready(function () {
 
       })//end of done function
       .fail(function () {
-        $preloader.hide();
         $articlelist.append(errortext);
 
       });//beginning of fail function 
