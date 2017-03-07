@@ -19,7 +19,7 @@ a {
     height:420;
     }
 }
-ul{
+.articlelist{
     position:relative;
     display:flex;
     flex-wrap:wrap;
@@ -32,7 +32,7 @@ ul{
     }
 }
 
-li{
+.article-item{
     flex-direction:row;
     flex-basis:100%;
     overflow-x:hidden;

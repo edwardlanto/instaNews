@@ -6,6 +6,8 @@ $(document).ready(function () {
   var errortext = 'Sorry, there was an error, please try again'
   var $navwrapper = $('.navwrapper')
 
+  $('select').selectric();
+
   $preloader.hide();
 
   $('.selector').on('change', function () {
@@ -37,7 +39,7 @@ $(document).ready(function () {
 
         $.each($data, function (item, value) {
           var fullArticle = ''
-          fullArticle += '<li>' + '<a href='
+          fullArticle += '<li class = "article-item">' + '<a href='
           fullArticle += value.url + '>'
           fullArticle += '<div class ="text-container">' + '<p class = "contenttext">'
           fullArticle += value.abstract
