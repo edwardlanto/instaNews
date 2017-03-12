@@ -95,7 +95,7 @@ a {
       width: 100%;
       height: 420; } }
 
-.articlelist {
+.article-list {
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -107,7 +107,7 @@ a {
   font-size: 50px;
   font-family: 'Montserrat',sans-serif; }
   @media (min-width: 600px) {
-    .articlelist {
+    .article-list {
       -ms-flex-direction: row;
           flex-direction: row; } }
 
@@ -131,15 +131,15 @@ a {
           flex-basis: 25%;
       height: 420px; } }
 
-.contentcontainer {
+.content-container {
   height: 100%;
   width: 100%; }
   @media (min-width: 1000px) {
-    .contentcontainer {
+    .content-container {
       height: 420px;
       object-fit: cover; } }
 
-.contenttext {
+.content-text {
   line-height: 1.5rem;
   box-sizing: border-box;
   font-family: 'Montserrat',sans-serif;
@@ -154,7 +154,7 @@ a {
   height: 0;
   transition: height 0.2s linear; }
 
-li:hover .contenttext {
+li:hover .content-text {
   height: 30%; }
 
 .container {
@@ -174,47 +174,47 @@ li:hover .contenttext {
           flex-direction: row; } }
   @media (min-width: 600px) and (min-width: 1000px) {
     .container {
-      height: 27rem;
+      height: 30rem;
       -ms-flex-pack: start;
           justify-content: flex-start; } }
 
 body {
   background-color: black; }
 
-.nytimage {
+.nyt-image {
   vertical-align: middle;
   width: auto;
   height: 220px;
   text-align: center;
-  animation-name: nytanimation;
+  animation-name: nyt-animation;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards; }
   @media (min-width: 600px) {
-    .nytimage {
+    .nyt-image {
       width: 25%;
       height: auto;
-      animation-name: nytanimatetablet;
+      animation-name: nyt-animate-tablet;
       margin-right: 10px; } }
   @media (min-width: 600px) and (min-width: 1000px) {
-    .nytimage {
-      height: 180px; } }
+    .nyt-image {
+      height: 220px; } }
 
-@keyframes nytanimation {
+@keyframes nyt-animation {
   0% {
     transform: translate(0px, 0px); }
   100% {
     transform: translate(20px, -5px); } }
 
-@keyframes nytanimatetablet {
+@keyframes nyt-animate-tablet {
   0% {
     transform: translate(0px, 0px); }
   100% {
     transform: translate(-10px, 5px); } }
 
-.navwrapper {
+.nav-wrapper {
   animation-name: navanimation;
   animation-duration: 1s;
   animation-iteration-count: 1;
@@ -222,16 +222,16 @@ body {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards; }
   @media (min-width: 600px) {
-    .navwrapper {
+    .nav-wrapper {
       animation-name: navanimatetablet;
       margin-right: 200px; } }
 
-.sectiontext {
+.section-text {
   color: #ffffff;
   font-size: 16px;
   font-family: 'opensans',sans-serif;
   font-weight: lighter;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   text-align: center; }
 
 .selector {
@@ -241,28 +241,28 @@ body {
   font-family: 'oslight',sans-serif;
   transition: all ease 0.2s; }
 
-.headershiftwitharticles {
+.header-shift-with-articles {
   height: auto;
   padding-top: 30px;
-  padding-bottom: 20px; }
+  padding-bottom: 45px; }
 
-.shrinkimage {
+.shrink-image {
   width: 150px;
   height: 150px; }
   @media (min-width: 600px) {
-    .shrinkimage {
+    .shrink-image {
       width: 67px;
       height: 67px; } }
   @media (min-width: 600px) and (min-width: 1000px) {
-    .shrinkimage {
+    .shrink-image {
       margin-left: 30px; } }
 
-.navarticleload {
-  margin-left: 50px; }
+.nav-article-load {
+  margin-left: 70px; }
 
 footer {
   position: relative;
-  overflow: hidden; }
+  top: 85px; }
 
 .copyright {
   color: #c2c2c2;

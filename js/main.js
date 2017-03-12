@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  var $articlelist = $('.articlelist')
+  var $articlelist = $('.article-list')
   var $container = $('.container')
-  var $nytimage = $('.nytimage')
+  var $nytimage = $('.nyt-image')
   var $preloader = $('.preloader')
   var errortext = 'Sorry, there was an error, please try again'
-  var $navwrapper = $('.navwrapper')
+  var $navwrapper = $('.nav-wrapper')
 
   $('select').selectric();
 
@@ -12,10 +12,10 @@ $(document).ready(function () {
 
   $('.selector').on('change', function () {
     var userInput = $('.selector').val();
-    $container.addClass('headershiftwitharticles')
-    $nytimage.addClass('shrinkimage')
+    $container.addClass('header-shift-with-articles')
+    $nytimage.addClass('shrink-image')
     $preloader.show();
-    $navwrapper.addClass('navarticleload')
+    $navwrapper.addClass('nav-article-load')
 
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + userInput + '.json';
     url += '?' + $.param({
@@ -41,10 +41,10 @@ $(document).ready(function () {
           var fullArticle = ''
           fullArticle += '<li class = "article-item">' + '<a href='
           fullArticle += value.url + '>'
-          fullArticle += '<div class ="text-container">' + '<p class = "contenttext">'
+          fullArticle += '<div class ="text-container">' + '<p class = "content-text">'
           fullArticle += value.abstract
           fullArticle += '</p>'
-          fullArticle += '<img class = "contentcontainer"'
+          fullArticle += '<img class = "content-container"'
           fullArticle += 'src="' + value.multimedia[4].url + '" />'
           fullArticle += '</a>' + '</li>'
 

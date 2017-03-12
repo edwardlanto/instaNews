@@ -19,7 +19,7 @@ a {
     height:420;
     }
 }
-.articlelist{
+.article-list{
     position:relative;
     display:flex;
     flex-wrap:wrap;
@@ -48,7 +48,7 @@ a {
         }
     }
 }
-.contentcontainer{
+.content-container{
     height:100%;
     width:100%;
 @include desktop{
@@ -63,7 +63,7 @@ a {
     
 
 
-.contenttext{
+.content-text{
     line-height:1.5rem;
     box-sizing:border-box;
     font-family:'Montserrat',sans-serif;
@@ -80,7 +80,7 @@ a {
 
 }
 
-li:hover .contenttext{
+li:hover .content-text{
     height:30%;
 }
 
