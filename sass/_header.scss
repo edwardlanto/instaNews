@@ -4,9 +4,8 @@
     justify-content:center;
     flex-direction:column;
     height: 40rem;
-    // overflow:hidden;
     @include tablet{
-    height: 40rem;
+    height: 30rem;
     flex-direction:row;
     @include desktop{
     height: 30rem;
@@ -31,10 +30,11 @@ body {
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 @include tablet{
-    width:25%;
+    width:23%;
     height:auto;
     animation-name:nyt-animate-tablet;
     margin-right:10px;
+    margin-left: 90px;
 @include desktop{
     height:220px;
         }   
@@ -93,7 +93,7 @@ body {
 .header-shift-with-articles{
     height:auto;
     padding-top:30px;
-    padding-bottom:45px;
+    // padding-bottom:45px;
 }
 
 
