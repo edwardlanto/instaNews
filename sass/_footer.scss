@@ -1,34 +1,30 @@
-footer{
-    position:relative;
+footer {
+    position: relative;
     top: 85px;
     display: flex;
     justify-content: center;
-    @include desktop{
-        justify-content:flex-start;
-        padding-left:2rem;
+    @include desktop {
+        justify-content: flex-start;
+        padding-left: 2rem;
     }
 }
-
-.copyright{
-    color:#c2c2c2;
-    top:15px;
-    text-align:center;
-    font-family:'opensans',sans-serif;
-    font-weight:lighter;
-    font-size:0.9rem;
-    padding-bottom:2rem;
-    position:absolute;
-    top: -75px;
-    @include tablet{
-    top:15px;
+.copyright {
+    color: #c2c2c2;
+    top: 15px;
+    text-align: center;
+    font-family: 'opensans', sans-serif;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 0;
+    @include tablet {
+        top: 15px;
     }
-    @include desktop{
-    text-align:left;
-
+    @include desktop {
+        text-align: left;
     }
 }
-
-
-.instacaps{
-    text-transform:uppercase;
+.instacaps {
+    text-transform: uppercase;
 }

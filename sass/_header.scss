@@ -1,120 +1,104 @@
-.container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 40rem;
-    @include tablet{
-    height: 30rem;
-    flex-direction:row;
-    @include desktop{
-    height: 30rem;
-    justify-content:flex-start;
+    @include tablet {
+        height: 30rem;
+        flex-direction: row;
+        @include desktop {
+            height: 30rem;
+            justify-content: flex-start;
         }
     }
 }
-
 body {
-    background-color:black;
+    background-color: black;
 }
-  
-.nyt-image{
-    vertical-align:middle;
-    width:auto;
+.nyt-image {
+    vertical-align: middle;
+    width: auto;
     height: 220px;
-    text-align:center;
-    animation-name:nyt-animation;
-    animation-duration:1s;
-    animation-iteration-count:1;
+    text-align: center;
+    animation-name: nyt-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-@include tablet{
-    width:23%;
-    height:auto;
-    animation-name:nyt-animate-tablet;
-    margin-right:10px;
-    margin-left: 90px;
-@include desktop{
-    height:220px;
-        }   
-    }   
-}
-
-@keyframes nyt-animation{
-    0%{
-        transform:translate(0px, 0px);
-    }
-    100%{
-        transform:translate(20px, -5px);
-        } 
-}
-
-@keyframes nyt-animate-tablet{
-    0%{
-        transform:translate(0px, 0px);
-    }
-    100%{
-        transform:translate(-10px, 5px);
+    @include tablet {
+        width: 23%;
+        height: auto;
+        animation-name: nyt-animate-tablet;
+        margin-right: 10px;
+        margin-left: 90px;
+        @include desktop {
+            height: 220px;
+        }
     }
 }
-
-.nav-wrapper{
-    animation-name:navanimation;
-    animation-duration:1s;
-    animation-iteration-count:1;
+@keyframes nyt-animation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(20px, -5px);
+    }
+}
+@keyframes nyt-animate-tablet {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(-10px, 5px);
+    }
+}
+.nav-wrapper {
+    animation-name: navanimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: ease-out;
-    animation-fill-mode: forwards;;
-    @include tablet{
-    animation-name:navanimatetablet;
-    margin-right:200px;
-        }
+    animation-fill-mode: forwards;
+    ;
+    @include tablet {
+        animation-name: navanimatetablet;
+        margin-right: 200px;
     }
-    
-
-.section-text{
-    color:#ffffff;
-    font-size:16px;
-    font-family:'opensans',sans-serif;
-    font-weight:lighter;
-    margin-bottom:17px;
-    text-align:center;
-        }
-
-.selector{
-    font-size:1.1rem;
-    display:block; 
-    width:100;
-    font-family:'oslight',sans-serif;
+}
+.section-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'opensans', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 17px;
+    text-align: center;
+}
+.selector {
+    font-size: 1.1rem;
+    display: block;
+    width: 100;
+    font-family: 'oslight', sans-serif;
     transition: all ease 0.2s;
-    }
-
-.header-shift-with-articles{
-    height:auto;
-    padding-top:30px;
+}
+.header-shift-with-articles {
+    height: auto;
+    padding-top: 30px;
     // padding-bottom:45px;
 }
-
-
-
 //---------------------CHANGE ON ARTICLE LOAD CLASSES
-
-.shrink-image{
-    width:150px;
-    height:150px;
-
-  @include tablet{
-    width:67px;
-    height:67px;
-    
-    @include desktop{
-    margin-left:30px;
+.shrink-image {
+    width: 150px;
+    height: 150px;
+    @include tablet {
+        width: 67px;
+        height: 67px;
+        @include desktop {
+            margin-left: 30px;
+        }
     }
 }
-
-}
-
-.nav-article-load{
-    margin-left:70px;   
+.nav-article-load {
+    margin-left: 70px;
 }

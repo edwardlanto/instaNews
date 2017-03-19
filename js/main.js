@@ -51,7 +51,6 @@ $(document).ready(function () {
 
           $articlelist.append(fullArticle);
         });//end of each
-        // debugger;
 
       })//end of done function
       .fail(function () {
