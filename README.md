@@ -6,52 +6,35 @@ and delivers a preloader to give user's a visual on loading to clarify its
 loading appropriately.
 
 
-# Tech
+# Technologies Used
 
+* HTML
+
+* CSS
+
+* Javascript 
+
+* Gulp
 <!------------------WHAT DID I LEARN------------------>
-In this project I learned alot about animations. It gives users a subtle, but
-amazing touch the webpage. Last project I got comments to validate my code, and
-I this project I validated during and after my project.
 
+* Using CSS keyframe animations to translate the header logo along the X and Y axis and adding fill-forwards to have the logo stick at its position after animatino durating is over.
 
-I learned how flexbox can be really powerful , and learned
-from my last project I should have implemented it, instead
-of trying to use percentages to fit the screen. I used to put
-display:flex on alot of unneccessary elements because my code
-was hard to read and I didnt understand display:flex as much and
-it would disorient my heights/widths and that led me to give up.
-I understand now its only used on the parent that needs display:flex
-.I also used an overflow propery and it's really helpful for keeping things 
-on the screen. I had the problem where my images were going off the page
-or users would need to side scroll to see it, but with overflow
-it kept it hidden and removed the side scroll all together.I also learned
-about using flex-direction to move my logo and select box to 
-where I would want it.
+* Implementing flex-basis to set a fixed width of article items at all media queries.
 
-Having ESlint and giving it rules it really hand and keep your code under
-a chartered set of rules to keep code structured.
+* I also used the overflow property to keep all off-screen content hidden and avoid having a side scroll.
 
-    Using the AJAX method 'GET' I was able to get all the 
-    information I needed. Now I understand API's and how they work and
-to match them with my selector adding UserInput to the URL and 
-making a variable from it. 'console.log' became very helpful
-to make sure I'm logging certain data at every point for specific
-kinds of data while I was navigating or 'traversing' through
-the DOM tree. ES
+* Using ESlint and setting it rules, I'd like to call it coding syntax and keeps my code consistent.
 
-I started to use comments on my main.js to keep organized and not have to keep wondering
-which closing bracket matches with each method/function. Node mo
+* Using the AJAX method 'GET' I was able to grab JSON formatted data
 
-    Learning to concatenate strings was very understable once I realized to just break it down and
-connect it with '+' signs. I took full advantage of addClass
-understand now its amazing and simple to understand and be able
-to move and resize objects on a certain function. The select
-element was really cool ! It was neccesary for appending
-API's with certain sections and gave me insight on 
-how to give users options to choose from. Finally, one of the
-most important things I learned was to clean up my code
-and make it obvious to differ children and parents and 
-take out commented code that I didn't need.
+* Console Log is a one of a developers greatest tools, I used it after methods to verify if my code is reading correctly and give me a response if it is.
 
-Overall this project was really good, and I learned alot !
+* Using comments on my main.js to keep organized and make it very clear which bracket belongs with which function.
 
+* Learning to concatenate strings and understanding how its simply breaking up string and using the += to add a value every line. signs. 
+
+* Implementing the addClass method to add a defined class on an element onClick.
+
+* I was able to apply the jQuery plugin Selectric to give my selectbox element a sleek, modern look.
+
+* Applying the sudo command :hover , to tell the article text to only tranitiion the height when the cursor is over the article.
