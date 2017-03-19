@@ -15,7 +15,9 @@ loading appropriately.
 * Javascript 
 
 * Gulp
-<!------------------WHAT DID I LEARN------------------>
+
+
+# Personal Learnings
 
 * Using CSS keyframe animations to translate the header logo along the X and Y axis and adding fill-forwards to have the logo stick at its position after animatino durating is over.
 
