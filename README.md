@@ -1,4 +1,6 @@
 # Instanews Project #
+
+### Project Summary ###
 This project is a responsive webpage that  fetches current news article
 (abstracts), URL's and related images from the New York Times API and appends 
 it on the webpage. It's fully compatible for mobile, tablet and desktop
